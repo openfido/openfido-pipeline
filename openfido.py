@@ -7,7 +7,6 @@ TODO: copy the contents of the README.md file here.
 version = 1 # specify API version for this pipeline
 
 NAME = "PIPELINE_NAME" # TODO: set this to your pipeline name
-DEBUG = False
 OPENFIDO_INPUT = os.getenv("OPENFIDO_INPUT")
 OPENFIDO_OUTPUT = os.getenv("OPENFIDO_OUTPUT")
 
@@ -16,6 +15,7 @@ CONFIG = {
 }
 
 OPTIONS = {
+    "DEBUG" : False,
     # TODO list your option names and values here   
 }
 
