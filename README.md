@@ -1,3 +1,17 @@
+# TODO list for new pipelines
+
+1. Edit `openfido.py` to implement your pipeline python3 code.
+
+2. Add modules used to `requirements.txt`.
+
+3. Create autotests in folders names `autotest/input_{1,2,...}`. Always create a `config.csv` and add any supporting data files required for the validation test.
+
+4. Commit and publish you new pipeline to GitHub.
+
+5. Edit `README.md` to document your pipeline's functionality. Delete everthing above the validation badge (below the horizontal line) when you are done.
+
+----
+
 [![validation](https://github.com/openfido/PIPELINE_NAME/actions/workflows/main.yml/badge.svg)](https://github.com/openfido/PIPELINE_NAME/actions/workflows/main.yml)
 
 *Insert a one-line description of the pipeline's function here.*
