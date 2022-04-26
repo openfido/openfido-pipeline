@@ -13,6 +13,8 @@ for in-depth instructions on setting up a manifest.
 
 6. Edit `README.md` to document your pipeline's functionality. Delete everthing above the validation badge (below the horizontal line) when you are done.
 
+![](https://giphy.com/embed/RhvmkykTrL6OeoYjEn)
+
 ----
 
 Pipeline status: [![validation](https://github.com/openfido/PIPELINE_NAME/actions/workflows/main.yml/badge.svg)](https://github.com/openfido/PIPELINE_NAME/actions/workflows/main.yml)
