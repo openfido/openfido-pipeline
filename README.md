@@ -6,14 +6,12 @@
 
 3. Create autotests in folders named `autotest/input_{1,2,...}`. Always create a `config.csv` and add any supporting data files required for the validation test.
 
-4. Create a manifest.json file for your pipeline for enhanced functionality and quick configuration. Follow instructions on the wiki [here](https://github.com/slacgismo/openfido-client/wiki)
+4. Create a manifest.json file for your pipeline for enhanced functionality and quick configuration. Follow instructions on the wiki [here](https://github.com/slacgismo/openfido-client/wiki/Configuring-the-manifest.json-file)
 for in-depth instructions on setting up a manifest.
 
 5. Commit and publish your new pipeline to GitHub.
 
 6. Edit `README.md` to document your pipeline's functionality. Delete everthing above the validation badge (below the horizontal line) when you are done.
-
-![](https://giphy.com/embed/RhvmkykTrL6OeoYjEn)
 
 ----
 
