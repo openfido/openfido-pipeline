@@ -1,0 +1,103 @@
+{
+    "name" : "Example Pipeline",
+    "description" : "This pipeline serves as a base example to help you build your own pipelines.",
+    "docker" : "debian:11",
+    "git" : "https://github.com/openfido/openfido-pipeline.git",
+    "branch" : "main",
+    "script" : "openfido.sh",
+    "manual": {
+      "config": "csv",
+      "example_rc": "rc",
+      "example_json": "json"
+    }, 
+    "config" : {
+      "VERBOSE":{
+        "input_type": "boolean",
+        "description": "Enables verbose output.",
+        "default": "true",
+        "prompt": "Example boolean"
+      },
+      "Input":{
+        "input_type": "title"
+      },
+      "WORKDIR":{
+        "input_type": "str",
+        "description": "Specifies the working directory.",
+        "default": "/tmp"
+      },
+      "INPUT_CSV":{
+        "input_type": "str required",
+        "description": "Specifies AMI input data file (REQUIRED).",
+        "default": ""
+      },
+      "GROUP_COUNT":{
+        "input_type": "int required",
+        "description": "Grouping count. Must be a positive number (REQUIRED).",
+        "default": "0"
+      },
+      "Outputs":{
+        "input_type": "title"
+      },
+      "PNG_FIGSIZE":{
+        "input_type": "str optional",
+        "description": "Specifies the output PNG image size (in inches)",
+        "default": "10x7"
+      },
+      "GridLAB-D":{
+        "input_type": "title"
+      },
+      "LOAD_SCALE":{
+        "input_type": "float",
+        "description": "Specifies the scaling of the schedule data to load (e.g., 1kVA=1000VA)",
+        "default": "1000"
+      },
+      "ENUM_TEST":{
+        "input_type": "enum",
+        "description": "example enum",
+        "default": "with",
+        "choices": "example, with, enum, properties"
+      },
+      "SET_TEST":{
+        "input_type": "set",
+        "description": "example with working set",
+        "default": "with, set",
+        "choices": "tests, with, working, set"
+      },
+      "UPLOAD_EXAMPLE":{
+        "input_type": "upload",
+        "description": "example upload field",
+        "default": "upload.csv",
+        "prompt": "testing upload comma 3",
+        "upload_max": 3,
+        "space_delimited": false
+      }
+    },
+    "example_rc": {
+      "COMMAND_1":{
+        "description": "Adds the -D command",
+        "default": "-D csv_load_options=\"-f config\""
+      },
+      "UPLOAD_2":{
+        "input_type": "upload required",
+        "description": "Another way of requiring multiple files in one field",
+        "default": "weather.glm test_R1-12.47-1.glm"
+      }
+      },
+      "example_json": {
+        "Json": {
+          "input_type": "arr",
+          "default": "item 1, item 2, item 3",
+          "prompt": "To Array",
+          "description": "This string of items will convert to a json array"
+
+        },
+        "valid": {
+          "input_type": "boolean",
+          "default": true
+        },
+        "inputs": {
+          "input_type": "int",
+          "default": -1
+        }
+      }
+  }
