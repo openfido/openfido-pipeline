@@ -17,47 +17,47 @@
         "default": "true",
         "prompt": "Example boolean"
       },
-      "Input":{
+      "Title":{
         "input_type": "title"
       },
-      "WORKDIR":{
+      "TEXT":{
         "input_type": "str",
-        "description": "Specifies the working directory.",
+        "description": "Specifies the working directory. Takes a string input.",
         "default": "/tmp"
       },
-      "INPUT_CSV":{
+      "EXAMPLE_REQUIRED":{
         "input_type": "str required",
-        "description": "Specifies AMI input data file (REQUIRED).",
+        "description": "This is a required field. You cannot submit the form without it!",
         "default": ""
       },
-      "GROUP_COUNT":{
+      "NUM_REQUIRED":{
         "input_type": "int required",
-        "description": "Grouping count. Must be a positive number (REQUIRED).",
+        "description": "Numbers-only version of the required field!",
         "default": "0"
       },
-      "Outputs":{
+      "Title 2":{
         "input_type": "title"
       },
-      "PNG_FIGSIZE":{
+      "EXAMPLE_OPTIONAL":{
         "input_type": "str optional",
-        "description": "Specifies the output PNG image size (in inches)",
+        "description": "Same as a basic str field. More for your organization style than the end user.",
         "default": "10x7"
       },
-      "GridLAB-D":{
+      "Title 3":{
         "input_type": "title"
       },
-      "LOAD_SCALE":{
+      "EXAMPLE_FLOAT":{
         "input_type": "float",
-        "description": "Specifies the scaling of the schedule data to load (e.g., 1kVA=1000VA)",
+        "description": "Same as int, just using python terminology.",
         "default": "1000"
       },
-      "ENUM_TEST":{
+      "ENUM_EXAMPLE":{
         "input_type": "enum",
         "description": "example enum",
         "default": "with",
         "choices": "example, with, enum, properties"
       },
-      "SET_TEST":{
+      "SET_EXAMPLE":{
         "input_type": "set",
         "description": "example with working set",
         "default": "with, set",
@@ -74,12 +74,12 @@
     },
     "example_rc": {
       "COMMAND_1":{
-        "description": "Adds the -D command",
-        "default": "-D csv_load_options=\"-f config\""
+        "description": ".rc files are essentially text files, so you don't have to specify an input, and it will default to str.",
+        "default": ".rc files also accept 'str required' if you specify the input type."
       },
       "UPLOAD_2":{
         "input_type": "upload required",
-        "description": "Another way of requiring multiple files in one field",
+        "description": "Requiring an upload, this field will also default to comma delimited with unlimited uploads.",
         "default": "weather.glm test_R1-12.47-1.glm"
       }
       },
@@ -98,6 +98,11 @@
         "inputs": {
           "input_type": "int",
           "default": -1
+        },
+        "warning": {
+          "input_type": "str required",
+          "default": "Making a form that converts to json doesn't work with child objects.",
+          "description": "Refer to the wiki linked in the readme for more info on making the manifest!"
         }
       }
   }
