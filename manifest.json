@@ -103,6 +103,14 @@
           "input_type": "str required",
           "default": "Making a form that converts to json doesn't work with child objects.",
           "description": "Refer to the wiki linked in the readme for more info on making the manifest!"
+        },
+        "Not seeing your manifest?":{
+          "input_type": "title"
+        },
+        "fix": {
+          "input_type": "str required",
+          "default": "Make sure your pipeline is in the openfido organization!",
+          "description": "Also ensure the 'Pipeline status:' badge is included in your readme.md file. Otherwise the github api can't easily locate your repository!"
         }
       }
   }
